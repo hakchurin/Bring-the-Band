@@ -1,0 +1,34 @@
+// COMPONENTS--also nav vvvvv like, routes
+//search
+//login
+//votes
+//logout
+//signup
+
+
+
+//SEARCH
+//search comp should have ajax request to spotify -- would ajax be a collection??
+    //display a list of bands
+      //band name, image, vote button
+        //save band votes to kinvey
+// input field
+//button
+
+//VOTE
+  //vote page
+    //list all the bands that have been voted for
+
+
+    // a model for likes voting page
+    //a model for username/login -- session module?
+    //model for the search page -- each band that came back from spotify
+
+
+    //a collection for the voting page
+    //a collection for the searches, search page, has an ajax,
+
+    //search ajax get, saved votes ajax post/put, saved votes has a get ajax
+
+
+3 models 2 collections 
