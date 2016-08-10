@@ -8,33 +8,42 @@ import SearchBandModel from './models/searchBandModel';
 // import SearchPageBand from './collections/searchPageBand';
 import SearchBar from './searchBar';
 import SearchPageBand from './collections/searchPageBands';
+import VoteCollection from './collections/VoteCollection';
+import Nav from './nav'
+
 
 const SearchMainPage = React.createClass({
 getInitialState: function(){
   return {
-    bands:store.SearchPageBand.toJSON()
+    bands:store.SearchPageBand.toJSON(),
 
   }
 },
 componentDidMount: function(){
-  store.SearchPageBand.on('update', this.searched)
+  store.SearchPageBand.on('update', this.searched);
   },
   searched: function(){
     this.setState({bands: store.SearchPageBand.toJSON()});
   },
+
 render: function(){
-console.log(bandName);
-      let bandName;
+
+  let bandName;
+
       if (this.state.bands[0]){
         bandName = this.state.bands.map((band,i)=>{
-          return < SearchPageBand bandName={band} key={i} />
-          // console.log(band.store);
+          console.log(band);
+          return < BandList band={band.artist} imgURL={band.image} vote={band.votes} key={i} />
+
         })
       }
+
+
+
         return(
           <div>
           <SearchBar />
-          <ul>
+          <ul id="theBand">
           {bandName}
           </ul>
           </div>

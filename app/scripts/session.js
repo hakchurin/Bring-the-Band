@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {router, Route, hashHistory} from 'react-router';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import {router, Route, hashHistory} from 'react-router';
 import $ from 'jquery';
 import Backbone from 'backbone';
+//
 import settings from './settings';
-
+// import SignUp from './collections/SignUp';
 
 
 const Session = Backbone.Model.extend({
@@ -22,15 +23,13 @@ const Session = Backbone.Model.extend({
       };
     }
   },
-
-
   login: function (username,password) {
     this.save({username:username, password:password},
      {
        success: (model,response) => {
          this.unset('password');
          window.localStorage.setItem('authtoken', response._kmd.authtoken);
-         router.navigate('searchPage', {trigger:true});
+         router.navigate('SearchMainPage', {trigger:true});
        },
        retrieve: function(){
          this.fetch({
@@ -38,10 +37,24 @@ const Session = Backbone.Model.extend({
          });
        }
      });
-   }
- });
+   },
+  signup: function(data){
+    $.ajax({
+      type:'POST',
+      url:`https:/baas.kinvey.com/user/${settings.appId}`,
+      data:JSON.stringify({username:data.username, password: data.password}),
+      contentType: 'application/json',
+      success: (s) =>{
+        this.set({
+          username:s.username,
+          authtoken:s._kmd.authtoken,
+          _id: s._id
+        })
+      },
+    })
+  }
+});
 
-let session = new Session();
-//
-//
-export default session;
+// let session = new Session();
+
+export default Session;

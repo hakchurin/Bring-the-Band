@@ -6,37 +6,37 @@ import {router, Route, hashHistory} from 'react-router';
 import store from './store';
 import SearchMainPage from './searchMainPage';
 import SearchPageBand from './collections/searchPageBands';
-import ListOfBand from './ListOfBand';
-import Votes from './votePage';
 
 
 
 
 
 
-const BandList = React.createClass({
+
+const ListOfBand = React.createClass({
 getInitialState: function(){
-  return{votes: this.props.vote}
+  return{bands:store.SearchPageBand.get('bandName')}
 },
 componentDidMount: function(){
   store.SearchPageBand.on('update', this.searched);
 },
-clickHandler: function (){
-  this.setState({votes:this.props.vote +1})
-
-},
 
   render: function(){
+
+//   let list= this.artists.items.map((artist,i) => {
+//  return  <SearchPageBand=  key={i} artists= {this.artists.name} />
+// })
+// }
+
 
     return(
 
       <li>
-      <img src={this.props.imgURL} />
-      <p id="bandName">{this.props.band} <button onClick= {this.clickHandler}>VOTE {this.state.votes}</button></p>
+      {this.state.artists.name}
 
       </li>
     )
 
 }
 });
-export default BandList;
+export default ListOfBand;

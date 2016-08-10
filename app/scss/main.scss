@@ -1,0 +1,157 @@
+img {
+width: 50%;
+}
+
+li{
+      width: 50%;
+      list-style-type: none;
+}
+
+ul#theBand{
+  display: flex;
+flex-wrap: wrap;
+width:100%;
+
+}
+
+div#bandSearch{
+  height: 20vh;
+  background: #4B7995;
+}
+
+input[type="search"]{
+  height: 10vh;
+  border: 2px solid white;
+  width: 55vw;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+
+}
+
+input#submit{
+  border: 3px;
+  width: 10vw;
+  height: 10vh;
+  transform: translateY(-13%);
+  font-size: 1.5rem;
+  background: #8DABC5;
+  color: white;
+}
+
+button{
+  border: 3px;
+    width: 6vw;
+    height: 5vh;
+    font-size: 1rem;
+    background: #8DABC5;
+}
+
+
+body{
+      background: cadetblue;
+}
+
+#bandName{
+  font-size: 1.5rem;
+font-family: sans-serif;
+}
+
+form#loginForm{
+  margin-left: 30rem;
+    margin-top: 15rem;
+}
+
+
+input#password{
+  border: 2px solid #5F9EA0;
+  text-align: center;
+height: 3rem;
+width: 20rem;
+}
+
+input#username{
+  border: 2px solid #5F9EA0;
+  text-align:center;
+height: 3rem;
+width: 20rem;
+}
+
+input#loginBtn{
+  border: 2px solid #8DABC5;
+  height: 3rem;
+  width: 10rem;
+  font-size: 1rem;
+  color:white;
+  font-family: sans-serif;
+  margin-left: 5rem;
+  background: #8DABC5;
+}
+
+input:-webkit-autofill{
+  background: white !important;
+}
+
+form{
+  margin-left: 30rem;
+    margin-top: 10rem;
+}
+
+
+input[type="text"]{
+  border: 2px solid #5F9EA0;
+text-align: center;
+height: 3rem;
+width: 20rem;
+}
+input[type="username"]{
+  border: 2px solid #5F9EA0;
+text-align: center;
+height: 3rem;
+width: 20rem;
+}
+input[type="name"]{
+  border: 2px solid #5F9EA0;
+text-align: center;
+height: 3rem;
+width: 20rem;
+}
+
+input[type="password"]{
+  border: 2px solid #5F9EA0;
+text-align: center;
+height: 3rem;
+width: 20rem;
+}
+input[type="email"]{
+  border: 2px solid #5F9EA0;
+text-align: center;
+height: 3rem;
+width: 20rem;
+}
+
+h2{
+margin-left: 5rem;
+color: #4B7995;
+font-size: 3rem;
+font-family:sans-serif;
+}
+
+input[type="submit"]{
+  border: 2px solid #8DABC5;
+  height: 3rem;
+  width: 10rem;
+  font-size: 1rem;
+  color:white;
+  font-family: sans-serif;
+  margin-left: 5rem;
+  background: #8DABC5;
+}
+
+h2#login{
+  margin-left: 5rem;
+  color: #4B7995;
+  font-size: 3rem;
+  font-family:sans-serif;
+}

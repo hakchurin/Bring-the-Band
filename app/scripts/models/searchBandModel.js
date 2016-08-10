@@ -8,6 +8,8 @@ import Backbone from 'backbone';
 
 
 const SearchBandModel = Backbone.Model.extend({
+  urlRoot:`https://baas.kinvey.com/appdata/kid_SJKu0nJF/spotify`,
+
   defaults: {
     bandName: '',
     url: ``,

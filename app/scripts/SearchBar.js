@@ -19,8 +19,9 @@ const SearchBar = React.createClass({
 
       return (
         <div id= "bandSearch">
+        <input type="search" placeholder="Search Band" ref="search"/>
+
         <input onClick ={this.clickHandler} type="submit" id="submit" value="submit"/>
-        <input type="search" placeholder="search" ref="search"/>
 
         </div>
     )

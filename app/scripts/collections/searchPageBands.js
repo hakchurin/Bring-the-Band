@@ -19,17 +19,18 @@ const SearchPageBand = Backbone.Collection.extend({
                     type: 'artist'
                 },
                 success: (response) => {
-                  console.log(response);
+
                     response.artists.items.forEach((artist) => {
                         if (artist.images[0]) {
                             this.add({
                                 artist: artist.name,
                                 artistId: artist.id,
-                                image: artist.images[0].url
+                                image: artist.images[0].url,
+                                votes: 0
                             })
                         }
                     })
-                    // this.trigger('update')
+                    this.trigger('update')
                 }
         })
 }

@@ -21,14 +21,14 @@ const Login = React.createClass ({
       username: username,
       password: password
     };
-    hashHistory.push(`/SearchBar`);
+    hashHistory.push(`/SearchMainPage`);
 
   },
   render: function(){
     return(
         <form onSubmit ={this.loginFunction} id="loginForm">
+        <h2 id="login"> Login </h2>
         <p>
-        hi
         <input type="text" id="username" placeholder="username" ref="username"/>
         </p>
         <p>
