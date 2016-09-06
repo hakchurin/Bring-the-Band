@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import {router, Route, hashHistory} from 'react-router';
 import $ from 'jquery';
 import Backbone from 'backbone';
-import session from '../session';
-
+import store from '../store';
 
 
 
@@ -17,11 +16,10 @@ const Login = React.createClass ({
     let username= this.refs.username.value;
     let password= this.refs.password.value;
 
-    let data = {
-      username: username,
-      password: password
-    };
+
+    store.session.login(username, password);
     hashHistory.push(`/SearchMainPage`);
+
 
   },
   render: function(){

@@ -19,6 +19,7 @@ const SearchPageBand = Backbone.Collection.extend({
                     type: 'artist'
                 },
                 success: (response) => {
+                  this.reset();
 
                     response.artists.items.forEach((artist) => {
                         if (artist.images[0]) {

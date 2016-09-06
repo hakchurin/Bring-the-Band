@@ -1,14 +1,12 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import {router, Route, hashHistory} from 'react-router';
+import router from './router';
 import $ from 'jquery';
 import Backbone from 'backbone';
-//
 import settings from './settings';
-// import SignUp from './collections/SignUp';
 
 
-const Session = Backbone.Model.extend({
+
+
+const session = Backbone.Model.extend({
   urlRoot: `https://baas.kinvey.com/user/${settings.appId}/login`,
   defaults: {
     username: '',
@@ -24,18 +22,17 @@ const Session = Backbone.Model.extend({
     }
   },
   login: function (username,password) {
+    console.log(this.toJSON());
     this.save({username:username, password:password},
      {
        success: (model,response) => {
          this.unset('password');
+         console.log(this.toJSON());
+         this.trigger('change');
          window.localStorage.setItem('authtoken', response._kmd.authtoken);
-         router.navigate('SearchMainPage', {trigger:true});
+        //  router.navigate('SearchMainPage', {trigger:true});
        },
-       retrieve: function(){
-         this.fetch({
-           url:`https://baas.kinvey.com/user/${settings.appId}/_me`
-         });
-       }
+
      });
    },
   signup: function(data){
@@ -52,9 +49,27 @@ const Session = Backbone.Model.extend({
         })
       },
     })
+  },
+  logout: function() {
+  $.ajax({
+     type: 'POST',
+     url: `https://baas.kinvey.com/user/${settings.appId}/_logout`,
+
+   })
+   localStorage.removeItem('authtoken')
+   this.clear()
+//    store.settings.history.push('login')
+ },
+
+
+  retrieve: function(){
+    this.fetch({
+      url:`https://baas.kinvey.com/user/${settings.appId}/_me`
+    });
   }
 });
 
+
 // let session = new Session();
 
-export default Session;
+export default session;

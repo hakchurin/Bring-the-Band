@@ -23,12 +23,6 @@ componentDidMount: function(){
 
   render: function(){
 
-//   let list= this.artists.items.map((artist,i) => {
-//  return  <SearchPageBand=  key={i} artists= {this.artists.name} />
-// })
-// }
-
-
     return(
 
       <li>

@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {router, Route, hashHistory} from 'react-router';
-// import SeachPageband from './searchPageBands';
 import store from './store';
-
+import Nav from './nav';
 
 const SearchBar = React.createClass({
 
@@ -20,13 +19,11 @@ const SearchBar = React.createClass({
       return (
         <div id= "bandSearch">
         <input type="search" placeholder="Search Band" ref="search"/>
-
         <input onClick ={this.clickHandler} type="submit" id="submit" value="submit"/>
-
+        <Nav />
         </div>
     )
   }
-
 
 });
 

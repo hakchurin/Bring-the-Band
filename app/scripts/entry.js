@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import { Router, Route, hashHistory } from 'react-router';
 import $ from 'jquery';
-// import Backbone from 'backbone';
+import Backbone from 'backbone';
 import router from './router';
 import settings from './settings';
+// import Session from './session';
+
+
 
 
 $(document).ajaxSend(function(evt, xhrAjax, jqueryAjax) {
@@ -16,6 +19,13 @@ $(document).ajaxSend(function(evt, xhrAjax, jqueryAjax) {
   }
 }
 });
+
+// if(localStorage.getItem('authtoken')){
+//   session.retrieve();
+// }
+
+
+Backbone.history.start();
 
 
 ReactDOM.render(router  , document.getElementById('container'));

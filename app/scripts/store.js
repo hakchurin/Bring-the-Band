@@ -1,11 +1,13 @@
 import SearchPageBand from './collections/searchPageBands';
 import Session from './session';
+import VoteCollection from './collections/voteCollection';
+
+
+
 
 export default {
   SearchPageBand: new SearchPageBand(),
-  // session: Session
+  voteCollection: new VoteCollection(),
   session: new Session()
-
-
 
 }

@@ -7,7 +7,7 @@ import store from './store';
 import SearchMainPage from './searchMainPage';
 import SearchPageBand from './collections/searchPageBands';
 import ListOfBand from './ListOfBand';
-import Votes from './votePage';
+// import Votes from './votePage';
 
 
 
@@ -23,6 +23,7 @@ componentDidMount: function(){
 },
 clickHandler: function (){
   this.setState({votes:this.props.vote +1})
+  store.voteCollection.addVoteFunction(this.props.band, this.props.imgURL);
 
 },
 
@@ -32,7 +33,7 @@ clickHandler: function (){
 
       <li>
       <img src={this.props.imgURL} />
-      <p id="bandName">{this.props.band} <button onClick= {this.clickHandler}>VOTE {this.state.votes}</button></p>
+      <p id="bandName">{this.props.band} <button onClick= {this.clickHandler}> <i className="fa fa-thumbs-o-up" aria-hidden="true"></i></button></p>
 
       </li>
     )

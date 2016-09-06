@@ -5,9 +5,7 @@ import SignUp from './collections/signUp';
 import SearchBar from './SearchBar';
 import SearchMainPage from './searchMainPage';
 import Votes from './votePage';
-// import Session from './session';
 
-// import Nav from './nav';
 
 
 
@@ -20,7 +18,6 @@ import Votes from './votePage';
       <Route path = "/searchMainPage" component = {SearchMainPage}/>
       <Route path = "/SearchBar" component = {SearchBar}/>
       <Route path = "/votePage" component = {Votes}/>
-
 
     </Router>
 
