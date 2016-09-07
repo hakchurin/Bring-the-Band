@@ -39,27 +39,30 @@ return {
   if (this.state.authtoken){
 navLink = (
     <div className="linkChange">
-    <input type= "button" id= "logoutBtn" value="Logout" onClick={this.logout}/>
-    <Link to="/votePage">Top Bands </Link>
-    <Link to ="/searchMainPage"> Search Bands </Link>
+    <Link to="/votePage" id="topBand"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i></Link>
+    <Link to ="/searchMainPage" id="search"> <i className="fa fa-search" aria-hidden="true"></i></Link>
+
+     <button id="signOutBtn" onClick= {this.logout} > <i className="fa fa-sign-out" aria-hidden="true"></i></button>
+
+
+
+
     </div>
   );
 
 } else {
   navLink= (
   <div className= "linkChange">
-  <Link to="/votePage">Top Bands </Link>
-  <Link to = '/login'> Login</Link>
+  <Link to="/votePage" id="topBand"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> </Link>
+  <Link to = '/login' id="loginBtn"> <i className ="fa fa-sign-in" aria-hidden="true"></i></Link>
   </div>
 );
 }
 
 
     return (
-      <div>
+      <div id="navLink">
       {navLink}
-
-
       </div>
     )
   }

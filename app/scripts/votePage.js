@@ -40,10 +40,15 @@ componentWillUnmount: function(){
         return < BandList band={band.name} vote={band.votes} imgURL={band.img} key={i}  />
     })
     return (
-      <ul>
+      <div id="voted">
+
+      <div id="navStyle">
+      </div>
+      <ul id="bands">
       <Nav/>
       {votedBands}
       </ul>
+      </div>
 
     )
   }

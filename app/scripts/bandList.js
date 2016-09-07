@@ -32,8 +32,9 @@ clickHandler: function (){
     return(
 
       <li>
-      <img src={this.props.imgURL} />
       <p id="bandName">{this.props.band} <button onClick= {this.clickHandler}> <i className="fa fa-thumbs-o-up" aria-hidden="true"></i></button></p>
+
+      <p><img src={this.props.imgURL} /></p>
 
       </li>
     )
