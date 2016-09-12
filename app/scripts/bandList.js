@@ -30,12 +30,9 @@ clickHandler: function (){
   render: function(){
 
     return(
-
       <li>
-      <p id="bandName">{this.props.band} <button onClick= {this.clickHandler}> <i className="fa fa-thumbs-o-up" aria-hidden="true"></i></button></p>
-
-      <p><img src={this.props.imgURL} /></p>
-
+      <p id="bandName">{this.props.band} <button onClick= {this.clickHandler}> <i id="thumbsUp" className="fa fa-thumbs-o-up" aria-hidden="true"></i></button></p>
+      <img src ={this.props.imgURL} id="bandImg" />
       </li>
     )
 

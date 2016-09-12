@@ -11,18 +11,12 @@ const SignUp = React.createClass({
     return{};
   },
   updateState: function(){
-    // this.setState(store.session.toJSON());
     this.setState(store.session.toJSON());
   },
   componentDidMount: function (){
-    // store.session.on('update change', this.updateState);
     store.session.on('change',this.updateState);
-    // console.log(session);
   },
-  // componentWillMount: function (){
-  //   // store.session.off('update change', this.updateState);
-  //   store.session.off('change',this.updateState)
-  // },
+
 
 
   submitFunction:function(e){
@@ -43,13 +37,7 @@ const SignUp = React.createClass({
     store.session.signup(data);
   },
 
-    // {
-    //   url:`https://baas.kinvey.com/user/${settings.appKey}`,
-    //   success: function(model,response){
-    //     model.unset('password');
-    //     window.localStorage.setItem('authtoken', response._kmd.authtoken);
-    //     hashHistory.push(`/SearchMainPage`);
-    //   },
+
 
 
 
@@ -59,6 +47,14 @@ const SignUp = React.createClass({
     }
 
     return(
+
+      <div id="signStyle">
+      <div id="video">
+      <video  autoPlay muted loop poster="/assets/band.png" id="bgvid">
+      <source src="/assets/guitar2_720.webm" type="video/webm" />
+      <source src="/assets/guitar2_720.mp4" type="video/mp4" />
+      </video>
+      </div>
 
       <form onSubmit= {this.submitFunction}>
       <h2> Sign Up </h2>
@@ -75,10 +71,11 @@ const SignUp = React.createClass({
       <input type="email" placeholder="email" ref="email"/>
       </p>
       <p>
-      <input type="submit" placeholder="submit" value="submit"/>
+      <input type="submit"  id="signBtn" placeholder="submit" value="submit"/>
       </p>
 
       </form>
+      </div>
     )
   }
 })
