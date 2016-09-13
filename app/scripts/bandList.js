@@ -7,7 +7,6 @@ import store from './store';
 import SearchMainPage from './searchMainPage';
 import SearchPageBand from './collections/searchPageBands';
 import ListOfBand from './ListOfBand';
-// import Votes from './votePage';
 
 
 
@@ -23,7 +22,7 @@ componentDidMount: function(){
 },
 clickHandler: function (){
   this.setState({votes:this.props.vote +1})
-  store.voteCollection.addVoteFunction(this.props.band, this.props.imgURL);
+  store.voteCollection.addVoteFunction(this.props.band, this.props.imgURL,store.session);
 
 },
 

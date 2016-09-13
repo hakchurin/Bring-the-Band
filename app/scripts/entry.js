@@ -5,7 +5,7 @@ import $ from 'jquery';
 import Backbone from 'backbone';
 import router from './router';
 import settings from './settings';
-// import Session from './session';
+import store from './store';
 
 
 
@@ -20,9 +20,9 @@ $(document).ajaxSend(function(evt, xhrAjax, jqueryAjax) {
 }
 });
 
-// if(localStorage.getItem('authtoken')){
-//   session.retrieve();
-// }
+if(localStorage.getItem('authtoken')){
+    store.session.retrieve();
+}
 
 
 Backbone.history.start();

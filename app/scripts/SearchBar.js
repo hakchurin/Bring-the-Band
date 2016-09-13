@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {router, Route, hashHistory} from 'react-router';
+import {router, Route, hashHistory, Link} from 'react-router';
 import store from './store';
 import Nav from './nav';
 
@@ -18,10 +18,7 @@ const SearchBar = React.createClass({
 
       return (
         <div id= "bandSearch">
-
-        <img src='/assets/btbBlack.svg' alt="btb" id="btb"/>
-
-
+        <Link to= "/searchMainPage"> <img src='/assets/btbBlack.svg' alt="btb" id="btb"/> </Link>
         <input type="search" placeholder="Search Band" ref="search"/>
         <input onClick ={this.clickHandler} type="submit" id="submit" value="Search"/>
         <Nav />

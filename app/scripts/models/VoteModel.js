@@ -11,7 +11,8 @@ const voteModel = Backbone.Model.extend({
   url:`https://baas.kinvey.com/appdata/kid_SJKu0nJF/BTB-votes`,
   idAttribute: '_id',
   defaults: {
-    votes:0
+    votes: 0,
+    voters: []
   }
 });
 

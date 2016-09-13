@@ -34,19 +34,28 @@ componentWillUnmount: function(){
 },
 
   render: function() {
-    console.log(votedBands);
 
+
+
+    let testVotedBands;
     let votedBands = this.state.bands.map((band,i)=>{
-        return < BandList band={band.name} vote={band.votes} imgURL={band.img} key={i}  />
+      // console.log(band);
+      console.log(store.session.get('username'));
+      console.log(band.voters);
+      console.log(band.voters.indexOf(store.session.get('username')));
+      if (band.voters.indexOf(store.session.get('username') !== -1)) {
+        return (<BandList band={band.name} vote={band.votes} imgURL={band.img} key={i}  />);
+      }
     })
     return (
       <div id="voted">
 
       <div id="navStyle">
+        <Link to= "/searchMainPage"> <img src='/assets/btbBlack.svg' alt="btb" id="btb"/> </Link>
       </div>
       <ul id="bands">
-      <Nav/>
-      {votedBands}
+        <Nav/>
+        {votedBands}
       </ul>
       </div>
 
