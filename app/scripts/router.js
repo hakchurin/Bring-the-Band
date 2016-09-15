@@ -16,7 +16,6 @@ import Votes from './votePage';
       <Route path = "/login" component = {Login}/>
       <Route path = "/signUp" component = {SignUp}/>
       <Route path = "/searchMainPage" component = {SearchMainPage}/>
-      <Route path = "/SearchBar" component = {SearchBar}/>
       <Route path = "/votePage" component = {Votes}/>
 
     </Router>

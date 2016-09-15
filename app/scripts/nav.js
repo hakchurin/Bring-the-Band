@@ -36,6 +36,7 @@ return {
     navLink = (
       <div className="linkChange">
         <Link to="/votePage" id="topBand"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i></Link>
+
         <Link to ="/searchMainPage" id="search"> <i className="fa fa-search" aria-hidden="true"></i></Link>
         <button id="signOutBtn" onClick= {this.logout} > <i className="fa fa-sign-out" aria-hidden="true"></i></button>
       </div>

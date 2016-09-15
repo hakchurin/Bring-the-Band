@@ -1,16 +1,13 @@
 img {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   background-size: cover;
-  min-height: 100%;
-  min-width: 100%; }
+  /* min-height: 100%; */
+  /* min-width: 100%; */ }
 
 img#btb {
-  height: 1px;
-  position: relative;
-  transform: translateX(103px);
-  right: 40em;
-  width: 1em; }
+  height: 80%;
+  width: auto; }
 
 img#bandImg:hover {
   opacity: 0.5; }
@@ -23,35 +20,49 @@ ul#theBand {
   width: 100%; }
 
 div#bandSearch {
-  height: 20vh;
-  background: #C0BFBD; }
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  background: gray; }
 
 input[type="search"] {
-  height: 10vh;
+  height: 85%;
   border: 2px solid white;
-  width: 55vw;
-  margin-left: 12rem;
-  /* margin-bottom: 3rem; */
+  width: 80%;
   text-align: center;
   font-size: 3rem;
-  transform: translateY(-111px); }
+  text-align: center;
+  font-size: 3rem; }
+
+a#topBand {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; }
+
+.linkChange {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+  margin-top: 3rem; }
 
 input#submit {
-  width: 10vw;
-  height: 10vh;
-  right: 4rem;
-  bottom: 11.3rem;
-  position: relative;
-  font-size: 1.5rem;
+  width: 20%;
+  height: 87%;
   background: #46463F;
   color: #A9A9A9;
-  font-family: sans-serif;
-  margin-left: 60rem; }
+  font-family: sans-serif; }
   input#submit:hover {
     background: #F5DB58;
     color: #46463F; }
 
+.searchSub {
+  height: 60%;
+  display: flex;
+  flex: 2;
+  margin: 40px 31px; }
+
 body {
+  margin: 0;
   background: #46463f; }
 
 #bandName {
@@ -133,11 +144,6 @@ ul#bands {
   display: flex;
   flex-wrap: wrap; }
 
-div#navLink {
-  position: absolute;
-  left: 67rem;
-  bottom: 37.5rem; }
-
 div#navStyle {
   height: 20vh;
   background: #C0BFBD; }
@@ -182,7 +188,7 @@ p#bandName {
 
 button#signOutBtn {
   width: 3vw;
-  height: 4.5vh;
+  height: 100%;
   font-size: 2.5rem;
   background: none;
   border: none;
@@ -204,6 +210,11 @@ button {
   border-radius: .3rem; }
   button:hover {
     background-color: #F5DB58; }
+
+#bandSearch a {
+  height: 100%;
+  display: flex;
+  align-items: center; }
 
 i#thumbsUp {
   font-size: 1.5rem;

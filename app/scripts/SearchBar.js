@@ -19,8 +19,10 @@ const SearchBar = React.createClass({
       return (
         <div id= "bandSearch">
         <Link to= "/searchMainPage"> <img src='/assets/btbBlack.svg' alt="btb" id="btb"/> </Link>
+        <div className="searchSub">
         <input type="search" placeholder="Search Band" ref="search"/>
         <input onClick ={this.clickHandler} type="submit" id="submit" value="Search"/>
+        </div>
         <Nav />
         </div>
     )

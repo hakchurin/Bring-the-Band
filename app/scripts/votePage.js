@@ -50,11 +50,12 @@ componentWillUnmount: function(){
     return (
       <div id="voted">
 
-      <div id="navStyle">
+      <div id="bandSearch">
         <Link to= "/searchMainPage"> <img src='/assets/btbBlack.svg' alt="btb" id="btb"/> </Link>
+        <Nav/>
+
       </div>
       <ul id="bands">
-        <Nav/>
         {votedBands}
       </ul>
       </div>
