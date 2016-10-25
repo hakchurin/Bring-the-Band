@@ -1,28 +1,43 @@
-# Basic Build with NPM scripts
-This is a project scaffolding and build tool for the TIY Austin Front-End Engineering course. Feel free to use and enjoy! Feedback and PRs welcome!
 
-## Features
-- A bare bones scaffolding for an SPA, without any libraries built in
-- A static server for serving up your dev environment via http
-- `app` directory for development, preloaded with an `index.html`, `scripts/entry.js`, `scss/main.scss` and `assets/`
-- `dist` directory for deployable code
-- es2015 and babel, including module syntax
-- mocha test runner, for support testing modules and react components with es2015 and jsx syntax using enzyme and the chai assertion library
-- sass (.scss)
 
-## Installation
-- Clone this repo (or fork then clone, if you prefer)
-- Remove the git history by running `rm -rf .git`
-- Set up a new git repo
-- Run `npm install`
-- if you get permission errors you may need to run `sudo npm install` to install a couple global dependencies
+## BRING THE BAND
 
-## Use
-- `npm install` will scaffold your project AND start the dev server
-- `npm start` will start the dev server and watch for changes
-- `npm test` will run any test files included in the test folder
-- `npm run deploy` will push the content of `dist/` to gh-pages
-- When the server is running, your site will be live on [http://localhost:8080/](http://localhost:8080/)
+## ABOUT
+ A local music venue has asked you to build a promotional app: Bring The Band! Bring the band will allow users to vote for musicians they want to see at the venue. The venue also hopes to gain a following and boost their patron engagement by tracking popular bands and trends.
 
-## Dependencies
-- `sass` [install guide here](http://sass-lang.com/install)
+
+## LIVE SITE 
+http://bring-the-band.surge.sh/
+
+
+## BUILD TOOLS WITH NPM SCRIPT
+JavaScript
+React.js
+es2015
+Backbone.js
+underscore.js
+SCSS (Sass)
+jQuery (ajax calls)
+
+
+##APIs
+Spotify
+Kinvey
+
+
+
+##FEATURES
+Searching --
+Search field queries Spotify's API for bands/artists
+Results of the Spotify search are displayed as a list of bands.
+
+Voting --
+If user votes on band, the vote is toggled.
+Voted page (results) are ordered from greatest amount of votes to least.
+Keeping track of votes in a separate collection on kinvey ( use a 'join table' ).
+
+Login/signup functionality --
+User is able to login and access voting features
+Users can sign up, and are registered on the backend, via Kinvey
+Anonymous login
+Automatically log in new users with an 'annonymous' account when they arrive at the site, allowing you to keep track of their behavior and let them view votes, but NOT allowing them to vote until they officially sign up.
